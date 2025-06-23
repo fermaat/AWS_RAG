@@ -14,7 +14,7 @@ API Gateway → Lambda (Query) ← OpenSearch (Vector Search)
 
 ## Components
 
-### 1. PDF Processing Lambda (`pdf_processor_lambda.py`)
+### 1. PDF Processing Lambda (`lambda_ingest_package`)
 - **Trigger**: S3 bucket upload events
 - **Function**: 
   - Downloads PDF from S3
@@ -23,7 +23,7 @@ API Gateway → Lambda (Query) ← OpenSearch (Vector Search)
   - Generates embeddings with Bedrock
   - Stores vectors in OpenSearch
 
-### 2. Query Lambda (`query_lambda.py`)
+### 2. Query Lambda (`lambda_query_package`)
 - **Trigger**: API Gateway HTTP requests
 - **Function**:
   - Receives user questions via API
